@@ -3,52 +3,20 @@
     
     <head>
         
-        <!-- Link to our script file -->
+        <!-- The head section is where we link to our external script files. In this case, we have a JavaScript file called toggleMore.js, located in the folder scripts. So, we use the script element to link this file, with a type attribute to denote that the linked file is a JavaScript file, and the file path provided in the src attribute. -->
         
-        <script type="text/javascript" src="scripts/slideshowControls.js"></script>
-        
-        <!-- Link to our stylesheet -->
-        
-        <link rel="stylesheet" href="quotestyle-fancy.css">
-        
+        <script type="text/javascript" src="scripts/toggleMore.js"></script>
     </head>
     
     <body>
 
-        <!-- Slideshow container -->
-        <div class="slideshow-container">
-
-            <!-- Full-width slides/quotes -->
-            <div class="slide">
-                <q>Sunshine Farms are super great and I want to go there again!</q>
-                <p class="author">- Unimportant Publication</p>
-            </div>
-
-            <div class="slide">
-                <q>This is literally the best place in the entire world.</q>
-                <p class="author">- Our Mom</p>
-            </div>
-
-            <div class="slide">
-                <q>Certainly a passable way to spend a weekend</q>
-                <p class="author">- Super Important Publication</p>
-            </div>
-
-            <!-- Next/prev buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-        </div>
+        <!-- Here we have a paragraph with three separate sections. The first is unnamed as it will never be modified by the JavaScript - this is the preview text. The second is called "dots" and is just an elipses (...) that starts visible but will be hidden once our button is pressed. The third section is the rest of the text other than the preview. This starts hidden, using the style display:none, and can be shown by pressing the button. -->
         
+        <p>Here we have some text. This is just the previou text. It can cut off anywhere, maybe even mid<span id="dots">...</span><span id="more" style="display:none;"> sentance. We probably have a lot more text, but it would make our website hard to navigate if we showed all the text right away. Thankfully we can use little previews to only show a bit of text, and reveal the rest using a button. Thank goodness for JavaScript!</span></p>
 
-        <!-- Dots/bullets/indicators -->
-        <div class="dot-container">
-            <span class="dot" onclick="showSlide(0)"></span> 
-            <span class="dot" onclick="showSlide(1)"></span> 
-            <span class="dot" onclick="showSlide(2)"></span> 
-        </div>
+        <!-- This is a button with the text "Read more". Clicking this will call the toggleMore() function set up in our JavaScript file. We pass along as parameters to the function the ids of the "more", "dots", and "button" elements so our script knows which elements to hide, show, or change -->
         
-        <script>showSlide(0)</script>
+        <button onclick="toggleMore('more', 'dots', 'button')" id="button">Read more</button>
 
     </body>
 </html>
