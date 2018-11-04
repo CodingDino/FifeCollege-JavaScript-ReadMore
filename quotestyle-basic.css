@@ -1,0 +1,48 @@
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+}
+
+/* Slides */
+.slide {
+    padding: 80px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    position: absolute;
+    top: 40%;
+    padding: 16px;
+}
+
+/* Position the "prev" button to the left */
+.prev {
+    border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next" button to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Add a background color to the active dot/circle, or when hovered over to indicate it can be interacted with */
+.active, .dot:hover {
+    background-color: #717171;
+}

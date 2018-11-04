@@ -1,0 +1,80 @@
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    
+    /* style stuff (optional) */
+    background: #f1f1f1f1;
+}
+
+/* Slides */
+.slide {
+    padding: 80px;
+    
+    /* style stuff (optional) */
+    text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    position: absolute;
+    top: 40%;
+    padding: 16px;
+    
+    /* style stuff (optional) */
+    user-select: none;
+    cursor: pointer;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Position the "prev" button to the left */
+.prev {
+    border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next" button to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Change button look on hover to show interactability (optional) */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    
+    /* style stuff (optional) */
+    background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    
+    /* style stuff (optional) */
+    cursor: pointer; 
+    margin: 0 2px;
+    transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle, or when hovered over to indicate it can be interacted with */
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Add an italic font style to all quotes (optional) */
+q {font-style: italic;}
+
+/* Add a blue color to the author (optional) */
+.author {color: cornflowerblue;}
