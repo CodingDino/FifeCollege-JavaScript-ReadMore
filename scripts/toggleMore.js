@@ -1,24 +1,35 @@
 
-// We create a function called toggleVisibility(). This function accepts one parameter - the name of the element to be hidden or shown. If that parameter is provided when the function is called, the function will store it in a variable called elementName.
+// We create a function called toggleMore(). This function accepts three parameters - the name of the element to be hidden or shown, the name of the element containing the elipsis that will be hidden or shown opposite the main element, and the name of the button used to hide or show these items.
 
-function toggleVisibility(elementName) {
+function toggleMore(moreName, dotsName, buttonName) {
     
-    // We declare a variable called element to store the element we want to edit. We fet this element using document.getElementById, and pass the elementName as parameter to the getElementById function. Remember that this name was provided to us by the calling code through our function's own parameter.
+    // We declare variables to store the three elements we plan to edit - the more section of our text, the dots (elipsis), and the button. We then store the elements in these variables using document.getElementById and passing along the names for these elements as provided to our own function from the calling code.
     
-    var element = document.getElementById(elementName);
+    var more = document.getElementById(moreName);
+    var dots = document.getElementById(dotsName);
+    var button = document.getElementById(buttonName);
     
-    // We check if the element's style attribute's display setting is set to "none" - is the element currently hidden?
-    if (element.style.display === "none") {
+    // We check if the more element's style attribute's display setting is set to "none" - is the more text currently hidden?
+    if (more.style.display === "none") {
         
-        // If the display is currently "none", we toggle it to "block" - changing it from hidden to shown.
-        element.style.display = "block";
+        // The text is currently HIDDEN, so...
+        // We should show it since we pressed the button!
+        // Show the text, hide the dots, and change the button to say "Read less"
+        
+        more.style.display = "inline";
+        dots.style.display = "none";
+        button.innerHTML = "Read less";
         
     } else {
         
-        // If the display is NOT currently "none", we change it to "none" - changing it from shown to hidden.
-        element.style.display = "none";
+        // The text is currently is NOT hidden, therefore it is SHOWN, so...
+        // We should hide it since we pressed the button!
+        // Hide the text, show the dots, and change the button to say "Read more"
         
-    }
+        more.style.display = "none";
+        dots.style.display = "inline";
+        button.innerHTML = "Read more"; 
     
+    }
     
 }

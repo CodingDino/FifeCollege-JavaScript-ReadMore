@@ -3,24 +3,20 @@
     
     <head>
         
-        <!-- The head section is where we link to our external script files. In this case, we have a JavaScript file called toggleVisibility.js, located in the folder scripts. So, we use the script element to link this file, with a type attribute to denote that the linked file is a JavaScript file, and the file path provided in the src attribute. -->
+        <!-- The head section is where we link to our external script files. In this case, we have a JavaScript file called toggleMore.js, located in the folder scripts. So, we use the script element to link this file, with a type attribute to denote that the linked file is a JavaScript file, and the file path provided in the src attribute. -->
         
-        <script type="text/javascript" src="scripts/toggleVisibility.js"></script>
+        <script type="text/javascript" src="scripts/toggleMore.js"></script>
     </head>
     
     <body>
 
-        <!-- We create a button with the text "More Info". This button uses the onClick attribute to call a function that has been defined in our JavaScript file - toggleVisibility(). We pass as a parameter to the function the id of the element whose visibility we want to toggle - in this case, the "moreInfo" element. -->
+        <!-- Here we have a paragraph with three separate sections. The first is unnamed as it will never be modified by the JavaScript - this is the preview text. The second is called "dots" and is just an elipses (...) that starts visible but will be hidden once our button is pressed. The third section is the rest of the text other than the preview. This starts hidden, using the style display:none, and can be shown by pressing the button. -->
         
-        <button onclick="toggleVisibility('moreInfo')">More Info</button>
+        <p>Here we have some text. This is just the previou text. It can cut off anywhere, maybe even mid<span id="dots">...</span><span id="more" style="display:none;"> sentance. We probably have a lot more text, but it would make our website hard to navigate if we showed all the text right away. Thankfully we can use little previews to only show a bit of text, and reveal the rest using a button. Thank goodness for JavaScript!</span></p>
 
-        <br><br>
+        <!-- This is a button with the text "Read more". Clicking this will call the toggleMore() function set up in our JavaScript file. We pass along as parameters to the function the ids of the "more", "dots", and "button" elements so our script knows which elements to hide, show, or change -->
         
-        <!-- This is the element which will be hidden or shown using our button. We need to give it an id attribute so the JavaScript knows which element to hide or show. We can control whether it starts hidden or shown by setting the style attribute to display:none (hidden) or display:block (shown) -->
-        
-        <div id="moreInfo" style="display:none;">
-          This info is hidden by default, using the "none" display style, but can be shown when needed using the button. It could contain any kind of non-essential info about your website, such as interesting history of the business, etc.
-        </div>
+        <button onclick="toggleMore('more', 'dots', 'button')" id="button">Read more</button>
 
     </body>
 </html>
