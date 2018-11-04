@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        
+        <!-- The head section is where we link to our external script files. In this case, we have a JavaScript file called toggleVisibility.js, located in the folder scripts. So, we use the script element to link this file, with a type attribute to denote that the linked file is a JavaScript file, and the file path provided in the src attribute. -->
+        
+        <script type="text/javascript" src="scripts/toggleVisibility.js"></script>
+    </head>
+    
+    <body>
+
+        <!-- We create a button with the text "More Info". This button uses the onClick attribute to call a function that has been defined in our JavaScript file - toggleVisibility(). We pass as a parameter to the function the id of the element whose visibility we want to toggle - in this case, the "moreInfo" element. -->
+        
+        <button onclick="toggleVisibility('moreInfo')">More Info</button>
+
+        <br><br>
+        
+        <!-- This is the element which will be hidden or shown using our button. We need to give it an id attribute so the JavaScript knows which element to hide or show. We can control whether it starts hidden or shown by setting the style attribute to display:none (hidden) or display:block (shown) -->
+        
+        <div id="moreInfo" style="display:none;">
+          This info is hidden by default, using the "none" display style, but can be shown when needed using the button. It could contain any kind of non-essential info about your website, such as interesting history of the business, etc.
+        </div>
+
+    </body>
+</html>
